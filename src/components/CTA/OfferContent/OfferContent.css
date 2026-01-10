@@ -1,0 +1,47 @@
+.offer-content {
+  margin-bottom: 2rem;
+  color: var(--color-white);
+}
+
+.offer-content strong {
+  background-color: var(--color-thirdry);
+  color: var(--color-white);
+  padding: 0.25rem 1.5rem;
+  display: inline-block;
+  clip-path: polygon(
+    0% 0%,              /* 左上 */
+    .8rem 50%,               /* 左側の「＜」の頂点 */
+    0% 100%,            /* 左下 */
+    100% 100%, /* 右下 */
+    calc(100% - .8rem) 50%,             /* 右側の「＞」の頂点 */
+    100% 0%  /* 右上 */
+  );
+}
+
+.offer-content span.large {
+  font-size: var(--text-size-3xl);
+  position: relative;
+}
+.offer-content span.large::before {
+  content: '・・・・';
+  position: absolute;
+  top: -0.5rem;
+  left: -3px;
+  width: 100%;
+  height: 0.5rem;
+  font-size: 1rem;
+  letter-spacing: 0px;
+}
+.offer-content span.x-large {
+  font-size: var(--text-size-6xl); /* 56px */
+}
+.offer-content-title {
+  margin: 1rem;
+}
+
+.offer-content-description {
+  font-size: 1.125rem;
+  color: var(--color-thirdry);
+  line-height: 1.6;
+}
+

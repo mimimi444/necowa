@@ -1,0 +1,19 @@
+.faq {
+  padding: 4rem 0;
+}
+
+.faq-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+
+.faq-boxes {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  width: 100%;
+  z-index: 1;
+}
+

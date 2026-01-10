@@ -1,0 +1,14 @@
+.cta {
+  padding: 4rem 0;
+  background-image: radial-gradient(circle at center, var(--color-primary) 70%, var(--color-thirdry) 120%);
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.cta-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+  text-align: center;
+}
+

@@ -1,0 +1,16 @@
+.life-image {
+  padding: 4rem 0;
+  background-color: var(--color-light-bg);
+}
+
+.life-image-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+.life-image-sections {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+

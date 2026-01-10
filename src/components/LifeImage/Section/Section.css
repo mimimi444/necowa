@@ -1,0 +1,23 @@
+.life-image-section {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  z-index: 1;
+}
+
+.life-image-section-image {
+  width: 100%;
+  overflow: hidden;
+}
+
+.life-image-section-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
+
+.life-image-section-introduction {
+  padding: 1rem;
+  background-color: var(--color-secondary);
+}

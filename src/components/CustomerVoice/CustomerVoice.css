@@ -1,0 +1,19 @@
+.customer-voice {
+  padding: 3rem 0;
+  background-color: var(--color-secondary);
+}
+
+.customer-voice-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+
+}
+
+
+.customer-voice-boxes {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 3rem;
+}
+

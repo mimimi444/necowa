@@ -1,0 +1,116 @@
+.price-list {
+  width: 100%;
+  margin: 0 auto;
+  padding: 2rem 0;
+}
+
+.price-list-title {
+  background-color: var(--color-thirdry);
+  color: var(--color-white);
+  margin-bottom: 1rem;
+  padding: 0.25rem 1.5rem;
+  display: inline-block;
+  clip-path: polygon(
+    0% 0%,              /* 左上 */
+    .8rem 50%,               /* 左側の「＜」の頂点 */
+    0% 100%,            /* 左下 */
+    100% 100%, /* 右下 */
+    calc(100% - .8rem) 50%,             /* 右側の「＞」の頂点 */
+    100% 0%  /* 右上 */
+  );
+}
+
+.price-list-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto auto;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.price-list-grid-item--full {
+  grid-column: 1 / -1;
+}
+.price-list-grid-item {
+  background-color: var(--color-white);
+  padding: .5rem;
+  border: 3px solid var(--color-thirdry);
+}
+
+.price-list-section {
+  margin-bottom: 3rem;
+}
+
+.price-list-section:last-of-type {
+  margin-bottom: 2rem;
+}
+
+.price-list-section-title {
+  margin-bottom: .5rem;
+  font-size: var(--text-size-base);
+  color: var(--color-thirdry);
+  font-weight: bold;
+  background-color: var(--color-accent);
+}
+
+.price-list-section-subtitle {
+  font-size: var(--text-size-sm);
+  color: var(--color-primary);
+}
+
+.price-list-items {
+  display: flex;
+  flex-direction: column;
+  gap: .5rem;
+  text-align: left;
+}
+.price-list-item:first-child {
+  padding-bottom: .25rem;
+  border-bottom: 1px solid var(--color-accent);
+}
+
+.price-list-item-name {
+  font-weight: bold;
+  color: var(--color-thirdry);
+}
+
+.price-list-item-details {
+  display: flex;
+  flex-direction: column;
+}
+
+.price-list-item-details p {
+  font-size: var(--text-size-sm);
+  color: var(--color-primary);
+  line-height: 1.5;
+  margin: 0;
+}
+
+.price-list-item-description {
+  font-size: var(--text-size-xs);
+  color: var(--color-thirdry);
+  line-height: 1.6;
+  margin-bottom: 0.5rem;
+}
+
+.price-list-item-note {
+  color: var(--color-primary);
+  font-size: var(--text-size-xs);
+  margin-top: 0.5rem;
+  font-style: italic;
+}
+
+.price-list-footer {
+  margin-top: 1rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--color-accent);
+  text-align: center;
+}
+
+.price-list-footer-text {
+  color: var(--color-white);
+  line-height: 1.6;
+  font-size: 0.875rem;
+}
+
+

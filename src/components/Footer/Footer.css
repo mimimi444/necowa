@@ -1,0 +1,26 @@
+.footer {
+  background-color: var(--color-thirdry);
+  color: var(--color-white);
+  padding: 2rem 0;
+  margin: auto;
+  margin-top: auto;
+  width: 100%;
+}
+
+.footer-container {
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 0 2rem;
+  text-align: center;
+}
+
+@media (min-width: 680px) {
+  .footer {
+    width: 480px;
+  }
+}
+
+.footer-copyright {
+  font-size: 0.875rem;
+}
+

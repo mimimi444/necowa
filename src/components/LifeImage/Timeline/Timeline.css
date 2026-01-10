@@ -1,0 +1,30 @@
+.life-image-timeline {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.life-image-timeline-item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem;
+  
+  background-color: var(--color-white);
+}
+
+.life-image-timeline-time {
+  font-weight: bold;
+  min-width: 60px;
+  color: var(--color-primary);
+  border-right: 2px solid var(--color-primary);
+  align-self: stretch;
+    display: flex;
+    align-items: center;
+}
+
+.life-image-timeline-action {
+  flex: 1;
+  color: var(--color-thirdry);
+  font-size: var(--text-size-sm);
+}

@@ -1,0 +1,115 @@
+.key-visual {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--color-light-bg);
+  overflow: hidden;
+}
+
+.key-visual-bg-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  background-image: linear-gradient(to bottom, transparent 50%, var(--color-secondary) 100%), url('/photos/fv.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  z-index: 0;
+  opacity: 0;
+  transform: scale(1.3);
+  transform-origin: center center;
+}
+
+.key-visual-container {
+  position: relative;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  z-index: 1;
+}
+
+.key-visual-svg {
+  text-align: right;
+  position: relative;
+  right: -1rem;
+  top: -3rem;
+  width: 100%;
+}
+
+.key-visual-svg svg {
+  width: 50%;
+  height: auto;
+  display: inline-block;
+}
+
+.key-visual-title {
+  text-align: center;
+  width: 100%;
+  margin-top: 1rem;
+}
+.key-visual-title h3 {
+  font-size: 1.2rem;
+  text-shadow: 0 0 5px var(--color-light-bg), 0 0 5px var(--color-light-bg), 0 0 5px var(--color-light-bg),0 0 5px var(--color-light-bg), 0 0 5px var(--color-light-bg);
+}
+
+.key-visual-title h3 .title-line {
+  display: block;
+}
+.key-visual-title h4 {
+  background-image: linear-gradient(to bottom, transparent 60%, var(--color-accent) 60%);
+  text-shadow: 0 0 5px var(--color-accent), 0 0 5px var(--color-accent), 0 0 5px var(--color-accent),0 0 5px var(--color-accent), 0 0 5px var(--color-accent);
+}
+.key-visual-title h4 strong {
+  font-size: var(--text-size-3xl);
+}
+
+
+/* スクロールダウンの位置 */
+.scroll {
+  position: absolute;
+  transform: translateX(50%);
+  bottom: 0;
+  right: 50%;
+  line-height: 1;
+  z-index: 3;
+}
+/* 線のアニメーション部分 */
+.scroll::before {
+  animation: scroll 2s infinite;
+  background-color: var(--color-primary);
+  bottom: -3rem;
+  content: "";
+  height: 40px;
+  left: 0;
+  margin: auto;
+  position: absolute;
+  right: 0;
+  width: 1px;
+}
+/* 線のアニメーション */
+@keyframes scroll {
+  0% {
+    transform: scale(1, 0);
+    transform-origin: 0 0;
+  }
+  50% {
+    transform: scale(1, 1);
+    transform-origin: 0 0;
+  }
+  51% {
+    transform: scale(1, 1);
+    transform-origin: 0 100%;
+  }
+  100% {
+    transform: scale(1, 0);
+    transform-origin: 0 100%;
+  }
+}

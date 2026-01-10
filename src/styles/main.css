@@ -1,0 +1,218 @@
+:root {
+  /* グローバルカラー */
+  --color-primary: #817779;
+  --color-secondary: #E9E7E8;
+  --color-thirdry: #4D4749;
+  --color-accent: #DED762;
+  --color-light-bg: #F3F1EF;
+  --color-white: #FFFFFF;
+
+  /* テキストサイズ */
+  --text-size-xs: 0.75rem; /* 12px */
+  --text-size-sm: 0.875rem; /* 14px */
+  --text-size-base: 1rem; /* 16px */
+  --text-size-lg: 1.125rem; /* 18px */
+  --text-size-xl: 1.25rem; /* 20px */
+  --text-size-2xl: 1.5rem; /* 24px */
+  --text-size-3xl: 2rem; /* 32px */
+  --text-size-4xl: 2.5rem; /* 40px */
+  --text-size-5xl: 3rem; /* 48px */
+  --text-size-6xl: 3.5rem; /* 56px */
+  --text-size-7xl: 4rem; /* 64px */
+
+  /* ノイズパターン - パキッとしたノイズ */
+  --noise-pattern: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3CfeComponentTransfer%3E%3CfeFuncA type='discrete' tableValues='0 1'/%3E%3C/feComponentTransfer%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' fill='%23000'/%3E%3C/svg%3E");
+  --noise-size: 200px 200px;
+  --noise-pattern-sharp: url("data:image/svg+xml,%3Csvg viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilterSharp'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='1.2' numOctaves='5' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3CfeComponentTransfer%3E%3CfeFuncA type='discrete' tableValues='0 1'/%3E%3C/feComponentTransfer%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilterSharp)' fill='%23000'/%3E%3C/svg%3E");
+  --noise-size-sharp: 100px 100px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  position: relative;
+  font-family: "Zen Kaku Gothic New", -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: var(--color-thirdry);
+  background-color: var(--color-primary);
+}
+
+/* body背景にSVGパターンを配置（透明度・回転付き） */
+body::before {
+  content: '';
+  position: fixed;
+  top: -50vh;
+  left: -50vw;
+  width: 200vw;
+  height: 200vh;
+  background-image: url('/body-bg.svg');
+  background-repeat: repeat;
+  background-size: 80px 80px;
+  opacity: 0.2;
+  transform-origin: center center;
+  pointer-events: none;
+  z-index: 0;
+  animation: slideDownRight 20s linear infinite; /* 20秒でゆっくり流れる */
+
+}
+/* 斜め右下に流れるアニメーション */
+@keyframes slideDownRight {
+  0% {
+    transform: rotate(-30deg) translate(0, 0);
+  }
+  100% {
+    transform: rotate(-30deg) translate(80px, 80px);
+  }
+}
+
+.app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  white-space: pre-line;
+}
+
+main {
+  position: relative;
+  flex: 1;
+  background-color: var(--color-light-bg);
+  overflow: hidden;
+}
+
+/* サイト全体にノイズを適用 */
+main::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: var(--noise-pattern-sharp);
+  background-size: var(--noise-size-sharp);
+  background-repeat: repeat;
+  opacity: 0.2;
+  mix-blend-mode: overlay;
+  pointer-events: none;
+  z-index: 1000;
+}
+main section {
+  position: relative;
+}
+
+h2 {
+  font-size: var(--text-size-2xl); /* 24px */
+  font-weight: bold;
+}
+
+h3 {
+  font-size: var(--text-size-xl); /* 20px */
+}
+main > section {
+  padding: 3rem 0;
+}
+main > section > div {
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 3rem 0;
+  z-index: 2;
+}
+
+/* セクションタイトルの共通スタイル */
+main section h2 {
+  position: relative;
+  text-align: center;
+  margin-bottom: 3rem;
+  display: inline-block;
+  opacity: 0;
+  transform: translateY(30px);
+}
+
+/* KeyVisualのタイトルはアニメーション対象外 */
+main section.key-visual h2 {
+  opacity: 1;
+  transform: translateY(0);
+}
+main section h2::before,
+main section h2::after {
+  /* content: ''; */
+  position: absolute;
+  display: block;
+  width: 1.5rem;
+  height: 4rem;
+  background-image: url('/parentheses.svg');
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  margin-bottom: 1rem;
+  top: calc(50% - 2rem);
+}
+main section h2::before {
+  left: -2rem;
+}
+main section h2::after {
+  content: '';
+  background-image: url('/line-triangle.svg');
+  bottom: -1rem;
+  width: 160px;
+  aspect-ratio: 15 / 1;
+  height: auto;
+  top: auto;
+  left: calc(50% - 80px);
+  margin-bottom: 0;
+}
+
+h2 .title-small {
+  font-size: var(--text-size-base);
+}
+/* セクションの区切り装飾 */
+main section,
+main section > div {
+  position: relative;
+}
+
+/* セクションの繋ぎ目 - 各セクションの下部にマスクを配置 */
+main section::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  transform: translateY(50%);
+  width: 100%;
+  aspect-ratio: 480 / 155.63;
+  background-color: var(--color-secondary);
+  mask-image: url('/separate.svg');
+  mask-repeat: no-repeat;
+  mask-position: center bottom;
+  mask-size: 100% 100%;
+  -webkit-mask-image: url('/separate.svg');
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-position: center bottom;
+  -webkit-mask-size: 100% 100%;
+  pointer-events: none;
+  z-index: 1;
+}
+main section.separate-light::after {
+  background-color: var(--color-light-bg);
+}
+main section.separate-dark::after {
+  background-color: var(--color-thirdry);
+}
+
+@media (min-width: 680px) {
+  main {
+    max-width: 480px;
+    margin: 0 auto;
+    width: 100%;
+    box-shadow: 0 0 3rem var(--color-thirdry);
+  }
+}
