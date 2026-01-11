@@ -1,5 +1,5 @@
 .header {
-  background-color: transparent;
+  background-image: linear-gradient(to bottom, #8f85868a, transparent);
   border-bottom: none;
   padding: .5rem 0;
   position: fixed;
