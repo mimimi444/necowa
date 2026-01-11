@@ -2,7 +2,7 @@
   /* グローバルカラー */
   --color-primary: #817779;
   --color-secondary: #E9E7E8;
-  --color-thirdry: #4D4749;
+  --color-tertiary: #4D4749;
   --color-accent: #DED762;
   --color-light-bg: #F3F1EF;
   --color-white: #FFFFFF;
@@ -40,7 +40,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  color: var(--color-thirdry);
+  color: var(--color-tertiary);
   background-color: var(--color-primary);
 }
 
@@ -205,7 +205,7 @@ main section.separate-light::after {
   background-color: var(--color-light-bg);
 }
 main section.separate-dark::after {
-  background-color: var(--color-thirdry);
+  background-color: var(--color-tertiary);
 }
 
 @media (min-width: 680px) {
@@ -213,6 +213,6 @@ main section.separate-dark::after {
     max-width: 480px;
     margin: 0 auto;
     width: 100%;
-    box-shadow: 0 0 3rem var(--color-thirdry);
+    box-shadow: 0 0 3rem var(--color-tertiary);
   }
 }

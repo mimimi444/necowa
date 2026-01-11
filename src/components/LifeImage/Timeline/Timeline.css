@@ -25,6 +25,6 @@
 
 .life-image-timeline-action {
   flex: 1;
-  color: var(--color-thirdry);
+  color: var(--color-tertiary);
   font-size: var(--text-size-sm);
 }

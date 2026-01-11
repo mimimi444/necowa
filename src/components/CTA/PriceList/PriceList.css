@@ -5,7 +5,7 @@
 }
 
 .price-list-title {
-  background-color: var(--color-thirdry);
+  background-color: var(--color-tertiary);
   color: var(--color-white);
   margin-bottom: 1rem;
   padding: 0.25rem 1.5rem;
@@ -34,7 +34,7 @@
 .price-list-grid-item {
   background-color: var(--color-white);
   padding: .5rem;
-  border: 3px solid var(--color-thirdry);
+  border: 3px solid var(--color-tertiary);
 }
 
 .price-list-section {
@@ -48,7 +48,7 @@
 .price-list-section-title {
   margin-bottom: .5rem;
   font-size: var(--text-size-base);
-  color: var(--color-thirdry);
+  color: var(--color-tertiary);
   font-weight: bold;
   background-color: var(--color-accent);
 }
@@ -71,7 +71,7 @@
 
 .price-list-item-name {
   font-weight: bold;
-  color: var(--color-thirdry);
+  color: var(--color-tertiary);
 }
 
 .price-list-item-details {
@@ -88,7 +88,7 @@
 
 .price-list-item-description {
   font-size: var(--text-size-xs);
-  color: var(--color-thirdry);
+  color: var(--color-tertiary);
   line-height: 1.6;
   margin-bottom: 0.5rem;
 }

@@ -4,7 +4,7 @@
 }
 
 .offer-content strong {
-  background-color: var(--color-thirdry);
+  background-color: var(--color-tertiary);
   color: var(--color-white);
   padding: 0.25rem 1.5rem;
   display: inline-block;
@@ -41,7 +41,7 @@
 
 .offer-content-description {
   font-size: 1.125rem;
-  color: var(--color-thirdry);
+  color: var(--color-tertiary);
   line-height: 1.6;
 }
 

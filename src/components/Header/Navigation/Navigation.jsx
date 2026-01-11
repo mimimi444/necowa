@@ -4,7 +4,7 @@ import './Navigation.css'
 function Navigation({ isOpen, onClose }) {
   const menuItems = [
     { id: 1, subLabel: 'ネコに惹かれるあなたに', label: 'ネコワの特徴', href: '#needs' },
-    { id: 2, subLabel: 'キャンペーン中！', label: '料金プラン', href: '#cta' },
+    { id: 2, subLabel: 'キャンペーン中！', label: '料金プラン', href: '#cta', emph:true},
     { id: 3, subLabel: 'ネコワ会員の皆様からのお声', label: 'レビュー', href: '#customer-voice' },
     { id: 4, subLabel: 'ライフスタイルをネコのワに', label: 'ご利用イメージ', href: '#life-image' },
     { id: 5, subLabel: '', label: 'よくある質問', href: '#faq' },
@@ -33,6 +33,14 @@ function Navigation({ isOpen, onClose }) {
 
   return (
     <>
+      {/* iOS Safari透過防止用の要素 */}
+      {isOpen && (
+        <>
+          <div className="navigation-status-bar-guard"></div>
+          <div className="navigation-tab-bar-guard"></div>
+        </>
+      )}
+
       {/* オーバーレイ */}
       {isOpen && (
         <div 
@@ -59,7 +67,7 @@ function Navigation({ isOpen, onClose }) {
                 onClick={(e) => handleLinkClick(e, item.href)}
               >
                 {item.subLabel && (
-                <span className="navigation-sub-label">{item.subLabel}</span>
+                <span className={`navigation-sub-label ${item.emph ? 'navigation-sub-label--emph' : ''}`}>{item.subLabel}</span>
               )}
                 {item.label}
               </a>

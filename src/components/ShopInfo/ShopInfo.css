@@ -1,6 +1,6 @@
 .shop-info {
   padding: 3rem 0;
-  background-color: var(--color-thirdry);
+  background-color: var(--color-tertiary);
 }
 .shop-info::after {
   display: none;

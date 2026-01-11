@@ -10,7 +10,7 @@
   width: 100%;
   padding: .5rem .5rem .5rem 4rem;
   color: var(--color-white);
-  background-color: var(--color-thirdry);
+  background-color: var(--color-tertiary);
   border: none;
   text-align: left;
   font-size: var(--font-size-base);
@@ -33,7 +33,7 @@
   height: 140%;
   transform: scale(1.2);
   background-color: var(--color-white);
-  color: var(--color-thirdry);
+  color: var(--color-tertiary);
   font-size: var(--font-size-small);
   font-weight: bold;
   border-top-right-radius: 5rem;
@@ -52,7 +52,7 @@
 
 .faq-box-answer {
   padding: 0 1rem;
-  color: var(--color-thirdry);
+  color: var(--color-tertiary);
   line-height: 1.6;
   font-size: var(--font-size-small);
   height: 0;
