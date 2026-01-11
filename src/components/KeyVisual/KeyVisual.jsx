@@ -43,6 +43,14 @@ function KeyVisual() {
         const mainCopy01Elements = mainCopy01 ? mainCopy01.querySelectorAll('*') : []
         const mainCopy02Elements = mainCopy02 ? mainCopy02.querySelectorAll('*') : []
         
+        // main-copy01, main-copy02にシャドウを適用
+        if (mainCopy01) {
+          mainCopy01.style.filter = 'drop-shadow(2px 2px 4px rgba(76, 58, 23, 0.8))'
+        }
+        if (mainCopy02) {
+          mainCopy02.style.filter = 'drop-shadow(2px 2px 4px rgba(76, 58, 23, 0.8))'
+        }
+        
         // 初期状態：すべての要素を透明にする
         gsap.set([...copyBadgeElements, ...copyBadge2Elements, ...copyBadge3Elements, ...mainCopy01Elements, ...mainCopy02Elements], { 
           opacity: 0 
