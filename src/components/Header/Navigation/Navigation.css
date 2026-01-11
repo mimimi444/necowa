@@ -1,28 +1,28 @@
 /* iOS Safari ステータスバー透過防止 */
 .navigation-status-bar-guard {
-    position: fixed;
-    top: 0;
-    left: 0;
-    pointer-events: none;
-    height: 5px; /* 5px以下だと効かない */
-    width: 100%;
-    background-color: var(--color-primary);
-    mix-blend-mode: lighten;
-    z-index: 300; /* ナビゲーションより上に配置 */
-  }
-  
-  /* iOS Safari タブバー透過防止 */
-  .navigation-tab-bar-guard {
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    pointer-events: none;
-    height: 4px; /* 4px以下だと効かない */
-    width: 100%;
-    background-color: var(--color-primary);
-    mix-blend-mode: lighten;
-    z-index: 300; /* ナビゲーションより上に配置 */
-  }
+  position: fixed;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  height: 5px; /* 5px以下だと効かない */
+  width: 100%;
+  background-color: #000;
+  mix-blend-mode: lighten;
+  z-index: 300; /* ナビゲーションより上に配置 */
+}
+
+/* iOS Safari タブバー透過防止 */
+.navigation-tab-bar-guard {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  pointer-events: none;
+  height: 4px; /* 4px以下だと効かない */
+  width: 100%;
+  background-color: #000;
+  mix-blend-mode: lighten;
+  z-index: 300; /* ナビゲーションより上に配置 */
+}
 
 .navigation-overlay {
   position: fixed;
