@@ -70,6 +70,8 @@ function Header() {
 
   return (
     <>
+      {/* iOS Safari ステータスバー透過防止 */}
+      <div className="header-status-bar-guard"></div>
       <header className="header">
         <div className="header-container">
           <div className="header-left">

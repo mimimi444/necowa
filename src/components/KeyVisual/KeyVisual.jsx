@@ -43,12 +43,27 @@ function KeyVisual() {
         const mainCopy01Elements = mainCopy01 ? mainCopy01.querySelectorAll('*') : []
         const mainCopy02Elements = mainCopy02 ? mainCopy02.querySelectorAll('*') : []
         
-        // main-copy01, main-copy02にシャドウを適用
+        // main-copy01, main-copy02にシャドウを適用（Safari対応）
+        const shadowFilter = 'drop-shadow(2px 2px 4px rgba(76, 58, 23, 0.8))'
         if (mainCopy01) {
-          mainCopy01.style.filter = 'drop-shadow(2px 2px 4px rgba(76, 58, 23, 0.8))'
+          mainCopy01.style.filter = shadowFilter
+          mainCopy01.style.webkitFilter = shadowFilter // Safari用
+          mainCopy01.style.transform = 'translateZ(0)' // ハードウェアアクセラレーション
+          // 子要素にも適用（Safariで確実に動作させるため）
+          mainCopy01Elements.forEach(el => {
+            el.style.filter = shadowFilter
+            el.style.webkitFilter = shadowFilter
+          })
         }
         if (mainCopy02) {
-          mainCopy02.style.filter = 'drop-shadow(2px 2px 4px rgba(76, 58, 23, 0.8))'
+          mainCopy02.style.filter = shadowFilter
+          mainCopy02.style.webkitFilter = shadowFilter // Safari用
+          mainCopy02.style.transform = 'translateZ(0)' // ハードウェアアクセラレーション
+          // 子要素にも適用（Safariで確実に動作させるため）
+          mainCopy02Elements.forEach(el => {
+            el.style.filter = shadowFilter
+            el.style.webkitFilter = shadowFilter
+          })
         }
         
         // 初期状態：すべての要素を透明にする
