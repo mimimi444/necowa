@@ -74,7 +74,7 @@ function CustomerVoice() {
   }, [])
 
   return (
-    <section className="customer-voice" ref={sectionRef}>
+    <section id="customer-voice" className="customer-voice" ref={sectionRef}>
       <div className="customer-voice-container">
         <h2 className="customer-voice-title">ネコワ会員の皆様からのお声</h2>
         <div className="customer-voice-boxes">

@@ -27,7 +27,7 @@ function FAQ({ separateLight = false }) {
   ]
 
   return (
-    <section className={`faq ${separateLight ? 'separate-light' : ''}`}>
+    <section id="faq" className={`faq ${separateLight ? 'separate-light' : ''}`}>
       <div className="faq-container">
         <h2 className="faq-title">よくある質問</h2>
         <div className="faq-boxes">

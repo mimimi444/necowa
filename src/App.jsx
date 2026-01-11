@@ -9,6 +9,7 @@ import CTA from './components/CTA/CTA'
 import CustomerVoice from './components/CustomerVoice/CustomerVoice'
 import LifeImage from './components/LifeImage/LifeImage'
 import FAQ from './components/FAQ/FAQ'
+import ShopInfo from './components/ShopInfo/ShopInfo'
 
 // ScrollTriggerプラグインを登録
 gsap.registerPlugin(ScrollTrigger)
@@ -62,6 +63,7 @@ function App() {
         <CTA separateLight />
         <FAQ separateLight />
         <CTA separateDark />
+        <ShopInfo />
         <Footer />
       </main>
     </div>

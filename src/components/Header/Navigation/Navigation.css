@@ -1,0 +1,109 @@
+.navigation-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 150;
+  opacity: 1;
+  pointer-events: auto;
+  animation: fadeInOverlay 0.3s ease;
+}
+
+@keyframes fadeInOverlay {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.navigation {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: var(--color-primary);
+  z-index: 200;
+  transform: translateX(100%);
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: -2px 0 8px rgba(0, 0, 0, 0.1);
+  overflow-y: auto;
+}
+
+.navigation--open {
+  transform: translateX(0);
+}
+
+.navigation-container {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 480px;
+    padding-top: 15vh;
+    margin: 0 auto;
+}
+.navigation-banner a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  opacity: 1;
+  transition: all 0.2s ease;
+}
+.navigation-banner a:hover {
+  opacity: .7;
+}
+.navigation-list {
+  list-style: none;
+  text-align: right;
+}
+
+.navigation-sub-label {
+  display: block;
+  font-size: var(--text-size-sm);
+  font-weight: normal;
+}
+.navigation-item {
+}
+
+.navigation-link {
+  display: block;
+  padding: 0 0 2rem;
+  color: var(--color-white);
+  text-decoration: none;
+  font-size: var(--text-size-lg);
+  font-weight: bold;
+  transition: background-color 0.2s, color 0.2s;
+  opacity: 1;
+  transition: all 0.2s ease;
+}
+
+.navigation-link:hover {
+  color: var(--color-secondary);
+  opacity: .7;
+}
+
+.navigation-link:active {
+  background-color: var(--color-secondary);
+  opacity: .7;
+}
+
+/* PC表示時のスタイル調整 */
+@media (min-width: 680px) {
+  .navigation {
+    width: 100%;
+  }
+  
+  .navigation-overlay {
+    left: 50%;
+    transform: translateX(-50%);
+    width: 480px;
+    max-width: 100vw;
+  }
+}
+

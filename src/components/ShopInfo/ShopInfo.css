@@ -1,0 +1,82 @@
+.shop-info {
+  padding: 3rem 0;
+  background-color: var(--color-thirdry);
+}
+.shop-info::after {
+  display: none;
+}
+
+.shop-info-container {
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.shop-info-title {
+  margin-bottom: 3rem;
+  color: var(--color-white);
+}
+
+.shop-info-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+/* 上段：写真エリア */
+.shop-info-image-area {
+  width: 100%;
+  background-color: var(--color-white);
+  overflow: hidden;
+  aspect-ratio: 16 / 9;
+}
+
+.shop-info-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* 下段：店舗情報エリア */
+.shop-info-text-area {
+  width: 100%;
+  color: var(--color-white);
+  font-size: var(--text-size-sm);
+}
+
+.shop-info-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.shop-info-label {
+  font-size: var(--text-size-base);
+  font-weight: bold;
+  padding: 1rem 1rem 1rem 0;
+  vertical-align: top;
+  text-align: left;
+  width: 30%;
+}
+
+.shop-info-value {
+  font-size: var(--text-size-base);
+  white-space: pre-line;
+  line-height: 1.8;
+}
+
+/* レスポンシブ対応 */
+@media (max-width: 680px) {  
+  .shop-info-table {
+    font-size: var(--text-size-sm);
+  }
+  
+  .shop-info-label {
+    width: 35%;
+    padding-right: 0.75rem;
+  }
+  
+  .shop-info-value {
+    padding-left: 0.75rem;
+  }
+}
+

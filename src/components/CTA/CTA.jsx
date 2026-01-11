@@ -124,7 +124,7 @@ function CTA({ separateLight = false, separateDark = false }) {
   if (separateDark) classNames.push('separate-dark');
   
   return (
-    <section className={classNames.join(' ')} ref={ctaRef}>
+    <section id='cta' className={classNames.join(' ')} ref={ctaRef}>
       <div className="cta-container">
         <OfferContent />
         <PriceList />

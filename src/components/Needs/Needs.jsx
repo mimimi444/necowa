@@ -22,7 +22,7 @@ function Needs() {
   ]
 
   return (
-    <section className="needs">
+    <section id='needs' className="needs">
       <div className="needs-container">
         <h2 className="needs-title">憧れの、ネコのいる暮らし<br /><span className='title-small'>諦めていませんか？</span></h2>
         <div className="needs-boxes">

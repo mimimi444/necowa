@@ -49,6 +49,11 @@
   height: auto;
   display: inline-block;
 }
+@media screen and (max-width: 680px) and (min-width: 481px) {
+  .key-visual-svg svg {
+    width: 34%;
+  }
+}
 
 .key-visual-title {
   text-align: center;
@@ -64,6 +69,7 @@
   display: block;
 }
 .key-visual-title h4 {
+  display: inline-block;
   background-image: linear-gradient(to bottom, transparent 60%, var(--color-accent) 60%);
   text-shadow: 0 0 5px var(--color-accent), 0 0 5px var(--color-accent), 0 0 5px var(--color-accent),0 0 5px var(--color-accent), 0 0 5px var(--color-accent);
 }

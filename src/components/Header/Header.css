@@ -7,7 +7,7 @@
   width: 100%;
   left: 50%;
   transform: translateX(-50%);
-  z-index: 100;
+  z-index: 201;
 }
 
 .header-container {
@@ -52,7 +52,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #fff;
+  color: var(--color-white);
   transition: opacity 0.2s;
 }
 
@@ -68,6 +68,11 @@
   display: block;
   filter: brightness(0) invert(1);
 }
+
+.header-hamburger-line {
+  stroke: var(--color-white);
+}
+
 @media (min-width: 680px) {
   .header {
     width: 480px;

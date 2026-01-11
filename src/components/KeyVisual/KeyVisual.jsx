@@ -99,7 +99,7 @@ function KeyVisual() {
           ease: 'power2.out',
           stagger: 0.1,
         }, '-=0.4')
-        // 4. タイトルアニメーション実行（stagger不要）
+        // 4. タイトルアニメーション実行
         .to([...titleLines, h4], {
           opacity: 1,
           y: 0,
@@ -111,7 +111,7 @@ function KeyVisual() {
   }, [])
 
   return (
-    <section className="key-visual" ref={sectionRef}>
+    <section id="key-visual" className="key-visual" ref={sectionRef}>
       <div className="key-visual-container">
         <div className="key-visual-svg" ref={containerRef}>
           {/* SVGはuseEffectで読み込み */}

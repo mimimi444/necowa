@@ -37,7 +37,7 @@ function LifeImage({ separateLight = false }) {
   ]
 
   return (
-    <section className={`life-image ${separateLight ? 'separate-light' : ''}`}>
+    <section id="life-image" className={`life-image ${separateLight ? 'separate-light' : ''}`}>
       <div className="life-image-container">
         <h2 className="life-image-title">
           <span style={{fontSize:'.75rem'}}>ライフスタイルをネコのワに。</span><br />
