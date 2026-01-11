@@ -8,7 +8,7 @@
   width: 100%;
   background-color: #000;
   mix-blend-mode: lighten;
-  z-index: 300; /* ナビゲーションより上に配置 */
+  z-index: 9999; /* 最前面に配置 */
 }
 
 /* iOS Safari タブバー透過防止 */
@@ -21,7 +21,7 @@
   width: 100%;
   background-color: #000;
   mix-blend-mode: lighten;
-  z-index: 300; /* ナビゲーションより上に配置 */
+  z-index: 9999; /* 最前面に配置 */
 }
 
 .navigation-overlay {
