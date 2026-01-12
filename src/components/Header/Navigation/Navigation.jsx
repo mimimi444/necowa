@@ -55,7 +55,7 @@ function Navigation({ isOpen, onClose }) {
         <div className="navigation-container">
           <div className="navigation-banner">
             <a href="#cta" onClick={(e) => handleLinkClick(e, '#cta')}>
-              <img src="/navBnr.svg" alt="ネコワ" />
+              <img src="/headerBnr.png" alt="ネコワ" />
             </a>
             </div>
           <ul className="navigation-list">

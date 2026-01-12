@@ -77,12 +77,18 @@
     padding-right: 1rem;
     margin: 0 auto;
 }
+.navigation-banner {
+    width: 40%;
+}
 .navigation-banner a {
   display: block;
   width: 100%;
   height: 100%;
   opacity: 1;
   transition: all 0.2s ease;
+}
+.navigation-banner img {
+    width: 100%;
 }
 .navigation-banner a:hover {
   opacity: .7;
