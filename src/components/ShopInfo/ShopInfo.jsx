@@ -5,11 +5,11 @@ function ShopInfo() {
   const shopInfo = {
     image: '/photos/necowa-outermock.jpg', // 店舗写真（後で追加）
     name: 'ネコワ',
-    address: '〒150-0001\n東京都渋谷区神宮前1-1-1',
-    access: 'JR山手線 原宿駅 徒歩5分\n東京メトロ千代田線 明治神宮前駅 徒歩3分',
+    address: '〒150-0000\n東京都渋谷区渋谷3丁目4-5 4F',
+    access: '渋谷駅C1出口から徒歩4分',
     hours: '平日: 10:00 - 22:00\n土日祝: 10:00 - 20:00',
     phone: '03-1234-5678',
-    email: 'info@necowa.jp'
+    email: 'info@necowa.com'
   }
 
   return (

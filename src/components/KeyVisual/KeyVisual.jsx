@@ -43,27 +43,38 @@ function KeyVisual() {
         const mainCopy01Elements = mainCopy01 ? mainCopy01.querySelectorAll('*') : []
         const mainCopy02Elements = mainCopy02 ? mainCopy02.querySelectorAll('*') : []
         
-        // main-copy01, main-copy02にシャドウを適用（Safari対応）
-        const shadowFilter = 'drop-shadow(2px 2px 4px rgba(120, 107, 81, 0.5))'
+        // SVG filter要素を追加（Safari対応）
+        const defs = svg.querySelector('defs') || svg.insertBefore(document.createElementNS('http://www.w3.org/2000/svg', 'defs'), svg.firstChild)
+        const filterId = 'drop-shadow-filter'
+        let filter = svg.querySelector(`#${filterId}`)
+        
+        if (!filter) {
+          // フィルターを定義（より簡潔に）
+          filter = document.createElementNS('http://www.w3.org/2000/svg', 'filter')
+          filter.setAttribute('id', filterId)
+          filter.setAttribute('x', '-50%')
+          filter.setAttribute('y', '-50%')
+          filter.setAttribute('width', '200%')
+          filter.setAttribute('height', '200%')
+          
+          // feDropShadowを使用（より簡潔）
+          const feDropShadow = document.createElementNS('http://www.w3.org/2000/svg', 'feDropShadow')
+          feDropShadow.setAttribute('dx', '4')
+          feDropShadow.setAttribute('dy', '4')
+          feDropShadow.setAttribute('stdDeviation', '4')
+          feDropShadow.setAttribute('flood-color', '#4c3a17')
+          feDropShadow.setAttribute('flood-opacity', '0.8')
+          
+          filter.appendChild(feDropShadow)
+          defs.appendChild(filter)
+        }
+        
+        // main-copy01, main-copy02にフィルターを適用
         if (mainCopy01) {
-          mainCopy01.style.filter = shadowFilter
-          mainCopy01.style.webkitFilter = shadowFilter // Safari用
-          mainCopy01.style.transform = 'translateZ(0)' // ハードウェアアクセラレーション
-          // 子要素にも適用（Safariで確実に動作させるため）
-          mainCopy01Elements.forEach(el => {
-            el.style.filter = shadowFilter
-            el.style.webkitFilter = shadowFilter
-          })
+          mainCopy01.setAttribute('filter', `url(#${filterId})`)
         }
         if (mainCopy02) {
-          mainCopy02.style.filter = shadowFilter
-          mainCopy02.style.webkitFilter = shadowFilter // Safari用
-          mainCopy02.style.transform = 'translateZ(0)' // ハードウェアアクセラレーション
-          // 子要素にも適用（Safariで確実に動作させるため）
-          mainCopy02Elements.forEach(el => {
-            el.style.filter = shadowFilter
-            el.style.webkitFilter = shadowFilter
-          })
+          mainCopy02.setAttribute('filter', `url(#${filterId})`)
         }
         
         // 初期状態：すべての要素を透明にする
