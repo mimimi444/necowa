@@ -44,7 +44,7 @@ function KeyVisual() {
         const mainCopy02Elements = mainCopy02 ? mainCopy02.querySelectorAll('*') : []
         
         // main-copy01, main-copy02にシャドウを適用（Safari対応）
-        const shadowFilter = 'drop-shadow(2px 2px 4px rgba(76, 58, 23, 0.8))'
+        const shadowFilter = 'drop-shadow(2px 2px 4px rgba(120, 107, 81, 0.5))'
         if (mainCopy01) {
           mainCopy01.style.filter = shadowFilter
           mainCopy01.style.webkitFilter = shadowFilter // Safari用

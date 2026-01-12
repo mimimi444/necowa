@@ -70,9 +70,8 @@ function Header() {
 
   return (
     <>
-      {/* iOS Safari ステータスバー透過防止 */}
       <div className="header-status-bar-guard"></div>
-      <header className="header">
+      <header className={`header ${isMenuOpen ? 'open' : ''}`}>
         <div className="header-container">
           <div className="header-left">
             <div className="header-logo">
@@ -86,11 +85,6 @@ function Header() {
             aria-label="メニュー"
             aria-expanded={isMenuOpen}
           >
-            {/* {isMenuOpen ? (
-              <img src="/close.svg" alt="メニューを閉じる" />
-            ) : (
-              <img src="/hamburger.svg" alt="メニューを開く" />
-            )} */}
             <svg 
               width="36" 
               height="31" 
